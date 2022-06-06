@@ -14,7 +14,7 @@ class ContactList:
                 self.contacts.remove(contact)
     
     def find_shared_contacts(self, other_contact_list):
-        shared_contacts = ContactList(f'{self.name}/{other_contact_list.name} shared contacts', [])
+        shared_contacts = ContactList(f'{self.name} & {other_contact_list.name} shared contacts', [])
         for contact in self.contacts:
             for other_contact in other_contact_list.contacts:
                 if contact['name'] == other_contact['name'] and contact['number'] == other_contact['number']:
@@ -54,7 +54,7 @@ friends_list = ContactList('my friends', [alice, bob, dan, carol])
 # print(friends_list.name)
 # print(friends_list.contacts)
 
-friends_list.remove_contact('alice')
+# friends_list.remove_contact('alice')
 
 # print(friends_list.name)
 # print(friends_list.contacts)
